@@ -49,7 +49,7 @@ export async function POST(request: Request) {
           slug: feed.slug,
           priceUsdc: feed.priceUsdc,
           resource: `/api/onchain-oracle/feeds/${feed.slug}/query`,
-          network: process.env.ORACLE_X402_NETWORK || "eip155:84532",
+          network: process.env.ORACLE_X402_NETWORK || "eip155:8453",
         },
       });
     }

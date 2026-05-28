@@ -15,4 +15,4 @@ Show a complete Base-themed paid oracle loop: create a feed, ingest an observati
 9. Refresh the dashboard and show paid query movement.
 
 ## Next Proof
-Swap demo observations for signed worker output, anchor feed roots on Base Sepolia, and use a configured x402 facilitator.
+Swap demo observations for signed worker output, anchor feed roots on Base mainnet, and use a configured x402 facilitator.

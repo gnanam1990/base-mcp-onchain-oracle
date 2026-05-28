@@ -4,12 +4,12 @@ import type { OracleFeed } from "./oracle-store";
 export function paymentRequirement(feed: OracleFeed, resourceUrl: string) {
   return {
     scheme: "exact" as const,
-    network: process.env.ORACLE_X402_NETWORK || "eip155:84532",
+    network: process.env.ORACLE_X402_NETWORK || "eip155:8453",
     asset: "USDC" as const,
     amount: feed.priceUsdc.toFixed(3),
     payTo: process.env.X402_RECEIVING_ADDRESS || "0x1111111111111111111111111111111111111111",
     resource: resourceUrl,
-    description: `Query ${feed.name} for ${feed.priceUsdc.toFixed(3)} USDC on Base Sepolia.`,
+    description: `Query ${feed.name} for ${feed.priceUsdc.toFixed(3)} USDC on Base mainnet.`,
   };
 }
 
