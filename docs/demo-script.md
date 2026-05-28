@@ -1,23 +1,15 @@
 # OnchainOracle Demo Script
 
 ## Goal
-Show a complete, user-approved Base MCP/x402 workflow for OnchainOracle.
+Show a complete Base-themed MVP surface for OnchainOracle.
 
-## Demo Flow
-1. Agent asks for the best Base USDC yields.
-2. OnchainOracle returns a 402 challenge for the paid ranking endpoint.
-3. Agent pays with USDC on Base and receives the ranking.
-4. Developer portal records the query and settlement receipt.
-5. Dashboard shows endpoint freshness and paid call volume.
+## Flow
+1. Open the dashboard.
+2. Show Base Account as the approval surface.
+3. Walk through the metrics and current status.
+4. Explain the four-step agent workflow.
+5. Show the MCP tools and sample records.
+6. Call `GET /api/onchain-oracle/status` to prove the product surface is machine-readable.
 
-## Required Prep
-- Use a funded Base Account test wallet.
-- Verify Base Sepolia before any Base mainnet action.
-- Keep payment amounts small for public demos.
-- Record the transaction or receipt links used in the demo.
-
-## Success Criteria
-- The product problem is clear in the first 30 seconds.
-- The UI shows the core workflow without relying only on terminal output.
-- Any AI or MCP action ends in a visible user approval or receipt.
-- The final screen proves the result with app state and an onchain/payment reference.
+## Next Proof
+Replace sample data with live Base Sepolia or x402-backed flows in the next implementation slice.

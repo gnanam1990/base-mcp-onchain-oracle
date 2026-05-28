@@ -1,30 +1,34 @@
 # OnchainOracle
 
-x402-monetized Base analytics for agents.
+x402-monetized Base analytics for agents and builders.
 
-**Status:** Planned third build using AgentPay payment/discovery primitives.
+**Status:** Data console MVP foundation
 
-OnchainOracle exposes curated token, whale, yield, and protocol-health data as paid x402 endpoints and MCP tools.
+Serve reliable token metrics, whale alerts, yield rankings, and protocol health data as paid machine-readable feeds.
 
-## Why It Exists
-Base MCP gives AI assistants access to Base Account actions such as balances, sends, swaps, contract calls, and x402 payments, with user approval for writes. This project turns that capability into a focused product for AI agents, DeFi apps, analysts, and developers that need paid high-signal Base data.
+## Current MVP
+- Base industrial-neon UI theme from the shared suite prompt.
+- Responsive dashboard with wallet/action controls, metrics, workflow, MCP tools, and live record surface.
+- Product status API at `/api/onchain-oracle/status`.
+- Smoke checks for required dashboard data.
 
-## Core Capabilities
-- Data ingestion jobs for Base token, DeFi, and wallet activity.
-- Paid x402 endpoints for token metrics, whale alerts, yield rankings, and protocol health.
-- Developer portal with docs, endpoint status, pricing, and example responses.
-- MCP server exposing query tools for AI assistants.
-- Usage dashboard for paid queries and data freshness.
+## Local Development
+```bash
+npm install
+npm run dev
+```
 
-## Roadmap Snapshot
-1. Define paid data products and static mock responses.
-2. Wire live data providers and freshness checks.
-3. Protect endpoints with x402 and receipt logging.
-4. Add MCP query tools and developer portal docs.
-5. Launch API examples, dashboards, and Base mainnet paid usage.
+Open `http://127.0.0.1:3000`.
 
-## Repository Status
-This repository is public from day one. It starts with product, architecture, roadmap, and demo documentation. Implementation commits should stay small and use conventional commit prefixes.
+## Checks
+```bash
+npm run typecheck
+npm run build
+npm run test:smoke
+```
+
+## Next Build Slice
+Wire the mocked dashboard data into real Base Sepolia reads, x402 payment verification, or contract prepare endpoints depending on this product's launch path.
 
 ## License
 MIT
