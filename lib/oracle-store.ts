@@ -103,7 +103,12 @@ const seedFeeds: OracleFeed[] = [
 ];
 
 function dbPath() {
-  return process.env.ORACLE_DATA_FILE || path.join(/*turbopackIgnore: true*/ process.cwd(), ".data", "onchain-oracle-db.json");
+  if (process.env.ORACLE_DATA_FILE) {
+    return process.env.ORACLE_DATA_FILE;
+  }
+  return process.env.VERCEL
+    ? path.join("/tmp", "onchain-oracle-db.json")
+    : path.join(/*turbopackIgnore: true*/ process.cwd(), ".data", "onchain-oracle-db.json");
 }
 
 function readDb(): OracleDb {
