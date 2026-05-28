@@ -1,0 +1,58 @@
+{
+  "repo": "base-mcp-onchain-oracle",
+  "name": "OnchainOracle",
+  "shortName": "OO",
+  "api": "onchain-oracle",
+  "category": "Paid Data Feed",
+  "tagline": "x402-monetized Base analytics for agents and builders.",
+  "status": "Data console MVP foundation",
+  "mission": "Serve reliable token metrics, whale alerts, yield rankings, and protocol health data as paid machine-readable feeds.",
+  "primaryAction": "Query feed",
+  "secondaryAction": "Price endpoint",
+  "metrics": [
+    {
+      "label": "Feeds",
+      "value": "4",
+      "tone": "blue"
+    },
+    {
+      "label": "Freshness",
+      "value": "18s",
+      "tone": "green"
+    },
+    {
+      "label": "Paid queries",
+      "value": "931",
+      "tone": "amber"
+    }
+  ],
+  "workflow": [
+    "Data job collects Base token, protocol, and wallet movement signals.",
+    "Agent requests a premium metric endpoint.",
+    "x402 payment gates detailed feed payloads.",
+    "Receipts and freshness logs make the feed auditable."
+  ],
+  "tools": [
+    "get_token_metrics",
+    "get_whale_alerts",
+    "get_yield_rankings",
+    "get_protocol_health"
+  ],
+  "records": [
+    [
+      "USDC yield ranking",
+      "0.002 USDC",
+      "18s fresh"
+    ],
+    [
+      "Large transfer feed",
+      "0.005 USDC",
+      "Base only"
+    ],
+    [
+      "Protocol health",
+      "0.003 USDC",
+      "Risk labeled"
+    ]
+  ]
+}
