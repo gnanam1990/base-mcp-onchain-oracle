@@ -1,9 +1,10 @@
 import { NextResponse } from "next/server";
-import projectData from "@/lib/project-data.json";
+import { dashboardData, oracleStats } from "@/lib/oracle-store";
 
 export function GET() {
   return NextResponse.json({
-    data: projectData,
+    data: dashboardData(),
+    stats: oracleStats(),
     status: "mvp_foundation_ready",
   });
 }
